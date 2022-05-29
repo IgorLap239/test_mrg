@@ -100,7 +100,7 @@ const ContentTable = ({
               return <th className='table-title'>
                   {column.dataField}
                   <i className='up' onClick={(e)=>sortTable(e, column.dataField)}/>
-                  <i className='dowm' onClick={(e)=>sortTable(e, column.dataField)}/>
+                  <i className='down' onClick={(e)=>sortTable(e, column.dataField)}/>
               </th>
           })}
           </tr>

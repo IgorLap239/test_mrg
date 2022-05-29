@@ -1,0 +1,58 @@
+.table-control {
+    max-width: 80%;
+    margin: auto;
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+}
+
+.checkboxes-list {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    max-height: 120px;
+    column-gap: 10px;
+}
+
+@media screen and (max-width: 1645px) {
+    .checkboxes-list {
+        max-height: 150px;
+    }
+}
+
+@media screen and (max-width: 1315px) {
+    .checkboxes-list {
+        max-height: 180px;
+    }
+}
+
+@media screen and (max-width: 1170px) {
+    .table-control {
+        max-width: 90%;
+    }
+}
+
+@media screen and (max-width: 1040px) {
+    .checkboxes-list {
+        max-height: 210px;
+    }
+}
+
+@media screen and (max-width: 850px) {
+    .checkboxes-list {
+        max-height: 240px;
+    }
+}
+
+@media screen and (max-width: 715px) {
+    .checkboxes-list {
+        max-height: 330px;
+    }
+}
+
+@media screen and (max-width: 590px) {
+    .checkboxes-list {
+        max-height: 450px;
+    }
+}

@@ -3,11 +3,14 @@ import { ContentTable } from './components/ContentTable';
 import { RequestForm } from './components/RequestForm';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
+import { TableControl } from './components/TableControl';
 
 const App = () => {
   const [users, setUsers] = useState([]);
   const [columns, setColumns] = useState([]);
   const [rows, setRows] = useState([]);
+  const [columnsState, setColumnsState] = useState(columns);
+  const [rowsState, setRowsState] = useState(rows);
   
   useEffect(()=> {
     if (users[0]) {
@@ -17,6 +20,14 @@ const App = () => {
       })
     }
   }, [users])
+
+  useEffect(()=> {
+    setColumnsState(columns)
+  }, [columns])
+
+  useEffect(()=> {
+    setRowsState(rows)
+  }, [rows])
 
   const createRows = (obj) => {
     let newObj = {}
@@ -71,9 +82,17 @@ const App = () => {
         users={users}
         setUsers={setUsers}
       />
-      {columns && <ContentTable
-        columns={columns}
+      {columns.length > 0 && <TableControl
         rows={rows}
+        columns={columns}
+        setColumnsState={setColumnsState}
+        setRowsState={setRowsState}
+      />}
+      {columns.length > 0 && <ContentTable
+        rows={rows}
+        columnsState={columnsState}
+        rowsState={rowsState}
+        setRowsState={setRowsState}
       />}
     </div>
   );

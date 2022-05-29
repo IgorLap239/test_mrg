@@ -1,0 +1,63 @@
+.table-wrapper {
+  max-width: 80%;
+  margin: auto;
+  overflow-x: auto;
+}
+
+.content-table {
+  margin-top: 20px;
+  width: 100%;
+}
+
+.table-row {
+  cursor: pointer;
+}
+
+.table-title, .table-cell {
+  min-width: 200px;
+  max-width: 250px;
+  word-wrap: break-word;
+}
+
+.table-title {
+  position: relative;
+  cursor: default;
+}
+
+.table-cell {
+  vertical-align: middle;
+}
+
+.table-control {
+  margin-top: 10px;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  max-height: 120px;
+  column-gap: 10px;
+}
+
+i {
+  position: absolute;
+  border: solid black;
+  border-width: 0 3px 3px 0;
+  display: inline-block;
+  padding: 3px;
+  cursor: pointer;
+}
+
+.up {
+  top: 10px;
+  right: 10px;
+  transform: rotate(-135deg);
+}
+
+.down {
+  bottom: 10px;
+  right: 10px;
+  transform: rotate(45deg);
+}
+
+i:hover {
+  border-color: rgb(42, 98, 219);
+}
